@@ -12,7 +12,8 @@ services:
   kibana:
     build: kibana
     # volumes:
-      # - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    # 設定ファイルを bind するときは kibana.yml で記述 or environment にかく
+    # - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
       - 5601:5601
     depends_on:
